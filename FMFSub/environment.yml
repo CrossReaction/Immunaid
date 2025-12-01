@@ -1,0 +1,16 @@
+name: immunaid-paper
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python>=3.10
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - statsmodels
+  - pip
+  - pip:
+      - pyDESeq2
+      - gprofiler-official

@@ -1,0 +1,3 @@
+# R environment (suggested)
+# Install packages manually or with renv:
+# install.packages(c('limma','edgeR','tidyverse','readr','stringr'))
