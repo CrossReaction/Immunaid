@@ -1,0 +1,61 @@
+project_name: "FMFSub"
+comparison_name: "biallelic_vs_simple_heterozygous"
+output_dir: "results"
+
+bulk_rnaseq:
+  counts_file: "data/bulk_rnaseq/gene_counts.tsv"
+  tx2gene_file: "config/tx2gene.tsv"
+  metadata_file: "metadata/sample_metadata.tsv"
+  sample_id_col: "sample_id"
+  group_col: "group"
+  reference_group: "simple_heterozygous"
+  contrast_group: "biallelic"
+  design_covariates: ["age", "sex", "batch"]
+  min_count: 10
+  min_prop_samples: 0.20
+  lfc_display_threshold: 1.0
+  alpha: 0.05
+  top_label_n: 15
+  use_apeglm: true
+  ensembl_to_symbol: false
+  fasta_index: "ref/transcripts.idx"
+  quant_dir: "data/bulk_rnaseq/kallisto"
+
+somascan:
+  expression_file: "data/somascan/somascan_expression.tsv"
+  metadata_file: "metadata/somascan_manifest.tsv"
+  sample_id_col: "sample_id"
+  group_col: "group"
+  reference_group: "simple_heterozygous"
+  contrast_group: "biallelic"
+  design_covariates: ["age", "sex", "plate"]
+  feature_id_col: "AptName"
+  feature_symbol_col: "Target"
+  log2_input: true
+  alpha: 0.05
+
+cytokines:
+  input_file: "data/cytokines/cytokines_long.tsv"
+  metadata_file: "metadata/cytokine_metadata.tsv"
+  sample_id_col: "sample_id"
+  group_col: "group"
+  analyte_col: "analyte"
+  value_col: "value"
+  log10_transform: true
+  pseudocount: 0.0
+  alpha: 0.05
+
+flow:
+  input_file: "data/flow/flow_features_long.tsv"
+  metadata_file: "metadata/flow_metadata.tsv"
+  sample_id_col: "sample_id"
+  group_col: "group"
+  feature_col: "feature"
+  value_col: "value"
+  feature_type_col: "feature_type"
+  alpha: 0.05
+
+plotting:
+  width: 8
+  height: 6
+  dpi: 300
