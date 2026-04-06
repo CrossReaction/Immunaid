@@ -4,3 +4,6 @@
 [submodule "RecurrentPericarditis"]
 	path = RecurrentPericarditis
 	url = git@github.com:CrossReaction/RecurrentPericarditis.git
+[submodule "FamilialMediterraneanFever"]
+	path = FamilialMediterraneanFever
+	url = git@github.com:CrossReaction/FamilialMediterraneanFever.git
