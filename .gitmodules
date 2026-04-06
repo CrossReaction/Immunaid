@@ -1,3 +1,6 @@
 [submodule "FMFSub"]
 	path = FMFSub
 	url = https://github.com/CrossReaction/FMFSub.git
+[submodule "RecurrentPericarditis"]
+	path = RecurrentPericarditis
+	url = git@github.com:CrossReaction/RecurrentPericarditis.git
