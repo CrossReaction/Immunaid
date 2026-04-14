@@ -7,3 +7,9 @@
 [submodule "FamilialMediterraneanFever"]
 	path = FamilialMediterraneanFever
 	url = git@github.com:CrossReaction/FamilialMediterraneanFever.git
+[submodule "STILLS"]
+	path = STILLS
+	url = git@github.com:CrossReaction/STILLS.git
+[submodule "MSAIDS"]
+	path = MSAIDS
+	url = git@github.com:CrossReaction/MSAIDS.git
